@@ -95,6 +95,7 @@ func newLocalStorage(installDir string) (l *local, err error) {
 	rootHash := buildCfg.RootHash
 	var productToApps = map[string]string{
 		"Diablo3":    Diablo3,
+		"Fenris": Diablo4,
 		"StarCraft1": Starcraft1,
 		"War3":       Warcraft3,
 	}
