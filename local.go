@@ -34,6 +34,7 @@ func newLocalStorage(installDir string) (l *local, err error) {
 
 	var dirToApp = map[string]string{
 		"Diablo III":   Diablo3,
+		"Diablo IV - Beta": Diablo4,
 		"StarCraft":    Starcraft1,
 		"Warcraft III": Warcraft3,
 	}
@@ -43,7 +44,7 @@ func newLocalStorage(installDir string) (l *local, err error) {
 	}
 	var cascDir string
 	switch app {
-	case Diablo3, Starcraft1, Warcraft3:
+	case Diablo3, Diablo4, Starcraft1, Warcraft3:
 		cascDir = filepath.Join(installDir, "Data")
 	default:
 		return nil, errors.WithStack(errors.New("unsupported app"))
