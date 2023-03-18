@@ -202,6 +202,8 @@ func bucketID(hash []byte) (uint8, error) {
 
 func findIdx(hash []byte, idxs []common.IdxEntry) (common.IdxEntry, error) {
 	foundIdx := common.IdxEntry{}
+	fmt.Println(foundIdx)
+
 	for _, idx := range idxs {
 		keyLen := len(idx.Key)
 		hashLen := len(hash)
