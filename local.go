@@ -12,8 +12,8 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/jybp/casc/blte"
-	"github.com/jybp/casc/common"
+	"github.com/ianmarmour/casc/blte"
+	"github.com/ianmarmour/casc/common"
 	"github.com/pkg/errors"
 )
 

@@ -1,6 +1,7 @@
 /*
 Explore CASC files from the command-line.
 Usage:
+
 	casc (-dir <install-dir> | -app <app> [-region <region>] [-cdn <cdn>]) [-o <output-dir>] [-v]
 */
 package main
@@ -16,8 +17,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/jybp/casc"
-	"github.com/jybp/casc/common"
+	"github.com/ianmarmour/casc"
+	"github.com/ianmarmour/casc/common"
 	"github.com/pkg/errors"
 )
 

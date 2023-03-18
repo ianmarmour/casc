@@ -1,4 +1,4 @@
-package diablo3
+package diablo4
 
 import (
 	"bytes"
@@ -195,12 +195,12 @@ func NewRoot(root []byte, fetchFn func(contentHash []byte) ([]byte, error)) (*Ro
 	//
 	packagesEntry := NamedEntry{}
 	for _, namedEntry := range baseNamedEntries {
-		if namedEntry.Filename == "Data_D3\\PC\\Misc\\Packages.dat" {
+		if namedEntry.Filename == "Data_D4\\PC\\Misc\\Packages.dat" {
 			packagesEntry = namedEntry
 		}
 	}
 	if packagesEntry == (NamedEntry{}) {
-		return nil, errors.WithStack(errors.New("Data_D3\\PC\\Misc\\Packages.dat not found"))
+		return nil, errors.WithStack(errors.New("Data_D4\\PC\\Misc\\Packages.dat not found"))
 	}
 	packagesB, err := fetchFn(packagesEntry.ContentHash[:])
 	if err != nil {

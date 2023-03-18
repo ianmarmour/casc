@@ -3,15 +3,17 @@ package casc
 import (
 	"net/http"
 
-	"github.com/jybp/casc/root/diablo3"
-	"github.com/jybp/casc/root/starcraft1"
-	"github.com/jybp/casc/root/warcraft3"
+	"github.com/ianmarmour/casc/root/diablo3"
+	"github.com/ianmarmour/casc/root/diablo4"
+	"github.com/ianmarmour/casc/root/starcraft1"
+	"github.com/ianmarmour/casc/root/warcraft3"
 	"github.com/pkg/errors"
 )
 
 // Program codes
 const (
 	Diablo3    = "d3"
+	Diablo4    = "d4"
 	Starcraft1 = "s1"
 	Warcraft3  = "w3"
 )
@@ -86,6 +88,8 @@ func newExplorer(storage storage) (*Explorer, error) {
 	switch storage.App() {
 	case Diablo3:
 		root, errRoot = diablo3.NewRoot(rootB, storage.FromContentHash)
+	case Diablo4:
+		root, errRoot = diablo4.NewRoot(rootB, storage.FromContentHash)
 	case Warcraft3:
 		root, errRoot = warcraft3.NewRoot(rootB)
 	case Starcraft1:

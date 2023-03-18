@@ -8,7 +8,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/jybp/casc/common"
+	"github.com/ianmarmour/casc/common"
 	"github.com/pkg/errors"
 )
 

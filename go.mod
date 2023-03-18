@@ -1,4 +1,4 @@
-module github.com/jybp/casc
+module github.com/ianmarmour/casc
 
 go 1.13
 
