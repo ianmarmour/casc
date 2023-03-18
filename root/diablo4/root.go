@@ -147,6 +147,9 @@ func NewRoot(root []byte, fetchFn func(contentHash []byte) ([]byte, error)) (*Ro
 	if err != nil {
 		return nil, err
 	}
+
+	fmt.Println(dirEntries);
+
 	assetEntriesByDir := map[string][]AssetEntry{}
 	assetIdxEntriesByDir := map[string][]AssetIdxEntry{}
 	namedEntriesByDir := map[string][]NamedEntry{}
@@ -165,6 +168,10 @@ func NewRoot(root []byte, fetchFn func(contentHash []byte) ([]byte, error)) (*Ro
 		assetIdxEntriesByDir[dirEntry.Filename] = assetIdxs
 		namedEntriesByDir[dirEntry.Filename] = nameds
 	}
+
+	fmt.Println(assetEntriesByDir)
+	fmt.Println(assetIdxEntriesByDir)
+	fmt.Println(namedEntriesByDir)
 
 	//
 	// CoreTOC.dat
