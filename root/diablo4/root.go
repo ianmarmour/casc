@@ -126,6 +126,7 @@ type Root struct {
 
 func (r *Root) Files() ([]string, error) {
 	names := []string{}
+	fmt.Println("test");
 	for name := range r.nameToContentHash {
 		names = append(names, name)
 	}
